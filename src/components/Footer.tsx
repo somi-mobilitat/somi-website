@@ -9,16 +9,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-10 w-10 rounded-full bg-gradient-to-br from-somi-400 to-somi-600 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
+              <img src="logo.svg" alt="Somi logo" className="h-10 w-auto"></img>
               <span className="font-bold text-2xl text-gray-900 dark:text-white">
                 Somi
               </span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
-              Plataforma de transport compartit basada en comunitats que connecta xarxes de confiança per a un transport compartit, sostenible i econòmic.
+              Comunitat en moviment
             </p>
+            {/*
             <div className="flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-somi-600 dark:text-gray-400 dark:hover:text-somi-400">
                 <Facebook size={20} />
@@ -33,96 +32,36 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
             </div>
+            */}
           </div>
           
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Producte</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Contacte</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Característiques
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Comunitats
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Viatges
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Calendari
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  App Mòbil
+                <a href="mailto:contacte@somi.cat" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
+                  contacte@somi.cat
                 </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Empresa</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Navegació</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Sobre Nosaltres
+                <a href="#inici" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
+                  Inici
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Carreres
+                <a href="#serveis" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
+                   Serveis
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Premsa
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Contacte
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Recursos</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Centre d'Ajuda
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Directrius de la Comunitat
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Consells de Seguretat
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Política de Privacitat
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
-                  Termes del Servei
+                <a href="#equip" className="text-gray-600 dark:text-gray-400 hover:text-somi-600 dark:hover:text-somi-400 text-sm">
+                  Equip
                 </a>
               </li>
             </ul>

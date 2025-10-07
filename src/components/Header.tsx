@@ -22,10 +22,10 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'Inici', href: '#home' },
-    { name: 'Característiques', href: '#features' },
-    { name: 'Comunitats', href: '#communities' },
-    { name: 'Viatges', href: '#rides' },
+    { name: 'Inici', href: '#inici' },
+    { name: 'Serveis', href: '#serveis' },
+    { name: 'Equip', href: '#equip' },
+    { name: 'Contacte', href: '#conctacte' },
   ];
 
   return (
@@ -39,9 +39,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center space-x-2">
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-somi-400 to-somi-600 flex items-center justify-center">
-            <span className="text-white font-bold text-xl">S</span>
-          </div>
+          <img src="logo.svg" alt="Somi logo" className="h-10 w-auto"></img>
           <span className={cn(
             "font-bold text-2xl transition-colors duration-300",
             isScrolled ? "text-gray-900 dark:text-white" : "text-gray-900 dark:text-white"
@@ -66,19 +64,6 @@ const Header = () => {
               {item.name}
             </a>
           ))}
-          <div className="flex items-center space-x-2 ml-4">
-            <Button 
-              variant="outline" 
-              className="rounded-full bg-white/80 backdrop-blur-sm border-gray-200 hover:bg-white"
-            >
-              Iniciar Sessió
-            </Button>
-            <Button 
-              className="rounded-full bg-somi-500 hover:bg-somi-600 text-somi-900"
-            >
-              Registrar-se
-            </Button>
-          </div>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -108,19 +93,6 @@ const Header = () => {
               {item.name}
             </a>
           ))}
-          <div className="flex flex-col space-y-2 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-            <Button 
-              variant="outline" 
-              className="w-full justify-center rounded-full"
-            >
-              Iniciar Sessió
-            </Button>
-            <Button 
-              className="w-full justify-center rounded-full bg-somi-500 hover:bg-somi-600 text-somi-900"
-            >
-              Registrar-se
-            </Button>
-          </div>
         </nav>
       </div>
     </header>

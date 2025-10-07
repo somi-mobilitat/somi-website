@@ -66,15 +66,11 @@ const Communities = () => {
   ];
 
   return (
-    <section id="communities" className="page-section py-24">
+    <section id="app" className="page-section py-24">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-          <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-somi-100 text-somi-800 mb-4">
-            <span className="flex h-2 w-2 rounded-full bg-somi-500 mr-2"></span>
-            Comunitats
-          </div>
           <h2 className="heading-lg text-gray-900 dark:text-white mb-4">
-            Uneix-te a <span className="text-gradient">comunitats de confiança</span> o crea la teva pròpia
+            L'app
           </h2>
           <p className="body-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Les comunitats són el cor de Somi. Proporcionen un entorn segur i de confiança

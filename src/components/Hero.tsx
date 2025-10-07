@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { ChevronRight, Users, MapPin, Calendar } from 'lucide-react';
+import { ChevronRight, Users, MapPin, Leaf, Calendar } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -23,49 +23,27 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative overflow-hidden min-h-screen flex items-center pt-28 pb-16">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-somi-50/50 to-white dark:from-gray-900/20 dark:to-gray-900 -z-10"></div>
-      
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC41Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjxwYXRoIGQ9Ik0xNiAxNmMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0LTEuOCA0LTQgNC00LTEuOC00LTR6TTM2IDE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDQtMS44IDQtNCA0LTQtMS44LTQtNHpNMTYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')] -z-10"></div>
-      
+    <section id="inici" className="relative overflow-hidden min-h-screen flex items-center pt-28 pb-16">
       <div className="container px-4 sm:px-6 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Text content */}
           <div className="animate-on-scroll">
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-somi-100 text-somi-800 mb-6">
-              <span className="flex h-2 w-2 rounded-full bg-somi-500 mr-2"></span>
-              Viatge compartit basat en comunitats
-            </div>
-            
             <h1 className="heading-xl text-gray-900 dark:text-white mb-6">
-              Comparteix viatges amb la teva<br />
-              <span className="text-gradient">comunitat</span>
+              Comunitat en <span className="text-gradient">moviment</span>
             </h1>
             
             <p className="body-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg">
-              Somi et connecta amb la teva comunitat per a un transport compartit fàcil, sostenible i econòmic. Crea o uneix-te a viatges dins de les teves xarxes de confiança.
+              Somi és l'única app que connecta conductors i passatgers en <b>comunitats locals</b> de confiança, facilitant <b>compartir trajectes habituals</b> de manera <b>eficient, segura i sostenible.</b>
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button className="rounded-full bg-somi-500 hover:bg-somi-600 text-white px-8 py-6 button-hover-effect">
-                Comença Ara
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" className="rounded-full px-8 py-6 border-gray-300 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-800 button-hover-effect">
-                Com Funciona
-              </Button>
-            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="flex items-start space-x-3">
                 <div className="rounded-full p-2 bg-somi-100 text-somi-700">
-                  <Users size={20} />
+                  <Leaf size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Comunitats</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Uneix-te a xarxes de confiança</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Sostenibilitat</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Transport sostenible i eficient per al dia a dia</p>
                 </div>
               </div>
               
@@ -74,18 +52,18 @@ const Hero = () => {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Viatges</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Crea o uneix-te a viatges</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Connexió</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Territoris connectats i en igualtat d'oportunitats</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3">
                 <div className="rounded-full p-2 bg-somi-100 text-somi-700">
-                  <Calendar size={20} />
+                  <Users size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Calendari</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Planifica els teus trajectes</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Comunitat</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Comunitats organitzades i cohesionades</p>
                 </div>
               </div>
             </div>
