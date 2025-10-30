@@ -24,14 +24,13 @@ const Communities = () => {
 
   const communities = [
     {
-      name: 'Veïns de Westgate',
+      name: 'Veïns de la Riera',
       members: 142,
       rides: 35,
       color: 'bg-somi-100',
       textColor: 'text-somi-800',
       iconColor: 'text-somi-600',
-      borderColor: 'border-somi-200',
-      features: ['Rutes escolars', 'Viatges de cap de setmana', 'Esdeveniments comunitaris']
+      borderColor: 'border-somi-200'
     },
     {
       name: 'Viatgers Tech Park',
@@ -40,8 +39,7 @@ const Communities = () => {
       color: 'bg-blue-100',
       textColor: 'text-blue-800',
       iconColor: 'text-blue-600',
-      borderColor: 'border-blue-200',
-      features: ['Desplaçaments diaris', 'Viatges a conferències', 'Recollides a l\'aeroport']
+      borderColor: 'border-blue-200'
     },
     {
       name: 'Treballadors del Centre',
@@ -50,8 +48,7 @@ const Communities = () => {
       color: 'bg-green-100',
       textColor: 'text-green-800',
       iconColor: 'text-green-600',
-      borderColor: 'border-green-200',
-      features: ['Viatges en hora punta', 'Grups de dinar', 'Esdeveniments després de la feina']
+      borderColor: 'border-green-200'
     },
     {
       name: 'Estudiants Universitaris',
@@ -60,8 +57,7 @@ const Communities = () => {
       color: 'bg-purple-100',
       textColor: 'text-purple-800',
       iconColor: 'text-purple-600',
-      borderColor: 'border-purple-200',
-      features: ['Transports al campus', 'Escapades de cap de setmana', 'Grups d\'estudi']
+      borderColor: 'border-purple-200'
     }
   ];
 
@@ -128,18 +124,10 @@ const Communities = () => {
               </div>
               <div className="lg:col-span-3">
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
-                  <div className="relative mb-6">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                    <input 
-                      type="text" 
-                      placeholder="Cerca comunitats..." 
-                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-somi-500 dark:focus:ring-somi-400 focus:border-transparent"
-                    />
-                  </div>
                   <div className="space-y-4">
                     {communities.map((community, index) => (
-                      <div 
-                        key={index} 
+                      <div
+                        key={index}
                         className="flex items-center space-x-4 p-4 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600 transition-colors"
                       >
                         <div className={`h-12 w-12 rounded-full ${community.color} flex items-center justify-center`}>
@@ -153,12 +141,6 @@ const Communities = () => {
                             <span>{community.rides} viatges actius</span>
                           </div>
                         </div>
-                        <Button 
-                          variant="outline" 
-                          className="px-4 rounded-full border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                        >
-                          Unir-se
-                        </Button>
                       </div>
                     ))}
                   </div>
@@ -172,50 +154,6 @@ const Communities = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {communities.map((community, index) => (
-            <div 
-              key={index} 
-              className={`rounded-2xl border ${community.borderColor} p-6 animate-on-scroll`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-center space-x-3 mb-4">
-                <div className={`h-10 w-10 rounded-full ${community.color} flex items-center justify-center`}>
-                  <Users className={`h-5 w-5 ${community.iconColor}`} />
-                </div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">{community.name}</h3>
-              </div>
-              <div className="flex items-center space-x-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
-                <div className="flex items-center">
-                  <Users className="h-4 w-4 mr-1" />
-                  <span>{community.members}</span>
-                </div>
-                <div className="h-1 w-1 rounded-full bg-gray-300 dark:bg-gray-600"></div>
-                <div>{community.rides} viatges</div>
-              </div>
-              <div className="mb-5">
-                <h4 className={`text-xs font-medium mb-2 ${community.textColor}`}>POPULAR PER</h4>
-                <div className="flex flex-wrap gap-2">
-                  {community.features.map((feature, idx) => (
-                    <span 
-                      key={idx} 
-                      className={`text-xs px-2 py-1 rounded-full ${community.color} ${community.textColor}`}
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <Button 
-                variant="outline" 
-                className="w-full rounded-full border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-              >
-                Veure Comunitat
-              </Button>
-            </div>
-          ))}
         </div>
       </div>
     </section>
