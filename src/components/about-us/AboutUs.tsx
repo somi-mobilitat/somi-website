@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { aboutUsSection } from './AboutUs.data.js';
-import { Dumbbell, Unplug } from 'lucide-react';
+import { Unplug } from 'lucide-react';
 
 const AboutUs = () => {
   useEffect(() => {

@@ -4,7 +4,6 @@ import { Users, MapPin, Calendar } from 'lucide-react';
 import { heroContent } from './Hero.data.js';
 
 const Hero = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
