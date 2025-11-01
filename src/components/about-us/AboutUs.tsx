@@ -20,7 +20,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section id="about-us" className="page-section py-24 bg-gray-50 dark:bg-gray-900">
+    <section id="about-us" className="page-section py-24 bg-gray-50">
       <div className="container">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
@@ -28,10 +28,10 @@ const AboutUs = () => {
             <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2"></span>
             {aboutUsSection.header.badge}
           </div>
-          <h2 className="heading-lg text-gray-900 dark:text-white mb-4">
+          <h2 className="heading-lg text-gray-900 mb-4">
             {aboutUsSection.header.title}
           </h2>
-          <p className="body-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="body-base text-gray-600 max-w-2xl mx-auto">
             {aboutUsSection.header.subtitle.map((part, index) => (
               <span
                 key={index}
@@ -44,11 +44,11 @@ const AboutUs = () => {
         </div>
 
         {/* Content */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl p-10 shadow-sm border border-gray-100 dark:border-gray-700 animate-on-scroll">
+        <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100 animate-on-scroll">
           <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-start">
             {/* LEFT: Challenges */}
             <div className="flex flex-col h-full text-center md:text-left">
-              <h3 className="heading-md text-gray-900 dark:text-white mb-6 flex items-center gap-2 text-green-700">
+              <h3 className="heading-md text-gray-900 mb-6 flex items-center gap-2 text-green-700">
                 <Unplug className="h-6 w-6" />
                 {aboutUsSection.challengesHeader}
               </h3>
@@ -70,14 +70,14 @@ const AboutUs = () => {
 
             {/* RIGHT: Values */}
             <div className="flex flex-col h-full text-center md:text-left">
-              <h3 className="heading-md text-gray-900 dark:text-white mb-6 text-green-700">
+              <h3 className="heading-md text-gray-900 mb-6 text-green-700">
                 {aboutUsSection.valuesHeader}
               </h3>
               <ul className="space-y-3">
                 {aboutUsSection.values.map((value, index) => {
                   const Icon = value.icon;
                   return (
-                    <li key={index} className="flex items-center gap-3 text-gray-900 dark:text-gray-200">
+                    <li key={index} className="flex items-center gap-3 text-gray-900">
                       <Icon className="h-5 w-5 text-black flex-shrink-0" />
                       <span>{value.text}</span>
                     </li>

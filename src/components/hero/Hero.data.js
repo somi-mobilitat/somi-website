@@ -5,7 +5,7 @@ export const heroContent = {
         highlight: 'moviment',
     },
     description: `
-    <b class='text-gray-900 dark:text-white'>Somi</b> et connecta amb conductors i passatgers en
+    <b class='text-gray-900'>Somi</b> et connecta amb conductors i passatgers en
     <b class='text-somi-600'> comunitats locals </b> de confiança, facilitant
     <b class='text-somi-600'> compartir trajectes habituals </b> de manera
     <b class='text-somi-600'> eficient, segura i sostenible</b>.

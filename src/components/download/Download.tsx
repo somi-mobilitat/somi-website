@@ -20,7 +20,7 @@ const Download = () => {
   }, []);
 
   return (
-    <section id="download" className="page-section py-24 bg-gray-50 dark:bg-gray-900">
+    <section id="download" className="page-section py-24 bg-gray-50">
       <div className="container">
 
         {/* Header */}
@@ -30,25 +30,25 @@ const Download = () => {
             {downloadContent.header.badge}
           </div>
           <div className="text-center max-w-3xl mx-auto mb-8 animate-on-scroll">
-            <h2 className="heading-lg text-gray-900 dark:text-white mb-4">
+            <h2 className="heading-lg text-gray-900 mb-4">
               {downloadContent.header.title}
             </h2>
-            <p className="body-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="body-base text-gray-600 max-w-2xl mx-auto">
               {downloadContent.header.subtitle}
             </p>
           </div>
         </div>
 
         {/* Columns */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl p-10 shadow-sm border border-gray-100 dark:border-gray-700 animate-on-scroll">
+        <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100 animate-on-scroll">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
             {/* LEFT */}
             <div className="flex flex-col h-full text-center md:text-left">
-              <h3 className="heading-md text-gray-900 dark:text-white mb-4">
+              <h3 className="heading-md text-gray-900 mb-4">
                 {downloadContent.leftColumn.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 whitespace-pre-line">
+              <p className="text-gray-600 mb-6 whitespace-pre-line">
                 {downloadContent.leftColumn.description}
               </p>
               <div className="flex flex-col sm:flex-row items-center md:items-start gap-4">
@@ -77,10 +77,10 @@ const Download = () => {
 
             {/* RIGHT */}
             <div id="contact" className="flex flex-col h-full text-center md:text-left scroll-mt-32">
-              <h3 className="heading-md text-gray-900 dark:text-white mb-4">
+              <h3 className="heading-md text-gray-900 mb-4">
                 {downloadContent.rightColumn.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+              <p className="text-gray-600 mb-6">
                 {downloadContent.rightColumn.description}
               </p>
               <a
