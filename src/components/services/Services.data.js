@@ -28,8 +28,10 @@ export const municipalServicesSection = {
                 "👥 Comunitats oficials dels habitants del municipi o membres de l’organització.",
                 "✅ Sistema de verificació antifrau i de seguretat.",
             ],
-            image: "aa",
-            alt: "App preview",
+            image: "/assets/images/map-pins--geojango-maps.jpg", // Photo by <a href="https://unsplash.com/@geojango_maps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">GeoJango Maps</a> on <a href="https://unsplash.com/photos/person-holding-red-round-medication-pill-Z8UgB80_46w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            alt: "Map pins image by GeoJango Maps",
+            imageAuthor: "GeoJango Maps",
+            imageCreditLink: "https://unsplash.com/@geojango_maps",
         },
         {
             icon: BarChart3,
@@ -40,8 +42,10 @@ export const municipalServicesSection = {
                 "⚙️ Adaptació del projecte segons les necessitats.",
                 "🎁 Disseny d’incentius per compartir trajectes.",
             ],
-            image: "aa",
-            alt: "Dashboard preview",
+            image: "/assets/images/dashboard--deng-xiang.jpg", // Photo by <a href="https://unsplash.com/@dengxiangs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Deng Xiang</a> on <a href="https://unsplash.com/photos/graphical-user-interface--WXQm_NTK0U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            alt: "Dashboard image by Deng Xiang",
+            imageAuthor: "Deng Xiang",
+            imageCreditLink: "https://unsplash.com/@dengxiangs",
         },
         {
             icon: Megaphone,
@@ -52,8 +56,15 @@ export const municipalServicesSection = {
                 "🛠️ Suport tècnic continu.",
                 "🔔 Sistema de notificacions i avisos personalitzats.",
             ],
-            image: "aa",
-            alt: "Marketing preview",
+            image: "/assets/images/marketing--luis-villasmil.jpg", // Photo by <a href="https://unsplash.com/@luisviol?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luis Villasmil</a> on <a href="https://unsplash.com/photos/person-holding-black-smartphone-4V8uMZx8FYA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            alt: "Workteam image by Luis Villasmil",
+            imageAuthor: "Luis Villasmil",
+            imageCreditLink: "https://unsplash.com/@luisviol",
         },
     ],
+    creditFooter: {
+        imagesBy: "Imatges de",
+        and: "i",
+        onUnsplash: "a Unsplash",
+    },
 };

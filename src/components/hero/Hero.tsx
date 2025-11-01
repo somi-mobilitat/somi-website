@@ -92,7 +92,7 @@ const Hero = () => {
                 <div className="h-1.5 w-20 bg-gray-800 dark:bg-gray-600 rounded-full"></div>
               </div>
               <img
-                src="/assets/images/journey_list_popup_screenshot.jpg"
+                src="/assets/images/journey-list-popup-somi.jpg"
                 alt="Somi App Mockup"
                 className="w-full h-full object-cover"
               />

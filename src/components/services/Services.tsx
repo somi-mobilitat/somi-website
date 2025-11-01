@@ -64,7 +64,7 @@ const MunicipalServices = () => {
               return (
                 <div
                   key={index}
-                  className="bg-green-50 dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-green-100 dark:border-gray-700 hover:shadow-md transition-all cursor-pointer"
+                  className="bg-green-50 dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-green-100 dark:border-gray-700 hover:shadow-md transition-all cursor-pointer flex flex-col h-full"
                   onClick={() => document.getElementById('download-contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <div className="flex justify-center mb-6">
@@ -73,7 +73,7 @@ const MunicipalServices = () => {
                   <h4 className="heading-sm text-center text-gray-900 dark:text-white mb-4">
                     {service.title}
                   </h4>
-                  <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-sm flex-1">
                     {service.items.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
@@ -83,6 +83,14 @@ const MunicipalServices = () => {
               );
             })}
           </div>
+
+          {/* CREDIT IMATGES */}
+          <p className="text-xs text-gray-400 mt-4 text-center">
+            {municipalServicesSection.creditFooter.imagesBy}&nbsp;
+            <a href={municipalServicesSection.services[0].imageCreditLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">{municipalServicesSection.services[0].imageAuthor}</a>,&nbsp;
+            <a href={municipalServicesSection.services[1].imageCreditLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">{municipalServicesSection.services[1].imageAuthor}</a> {municipalServicesSection.creditFooter.and}&nbsp;
+            <a href={municipalServicesSection.services[2].imageCreditLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">{municipalServicesSection.services[2].imageAuthor}</a> {municipalServicesSection.creditFooter.onUnsplash}
+          </p>
         </div>
       </div>
     </section>
