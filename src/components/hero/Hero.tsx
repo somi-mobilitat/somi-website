@@ -51,10 +51,18 @@ const Hero = () => {
             </div>
 
             {/* Description */}
-            <p
-              className="text-lg sm:text-xl text-gray-600 max-w-2xl"
-              dangerouslySetInnerHTML={{ __html: heroContent.description }}
-            />
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl">
+              <b className="text-gray-900">{heroContent.descriptionInBold}</b>
+              {heroContent.description.map((part, index) => (
+                <span
+                  key={index}
+                  className={part.emphasis ? 'font-semibold text-somi-600' : ''}
+                >
+                  {part.text}
+                </span>
+              ))}
+            </p>
+
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12 mt-8">

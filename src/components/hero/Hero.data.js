@@ -4,12 +4,16 @@ export const heroContent = {
         main: 'Comunitat en',
         highlight: 'moviment',
     },
-    description: `
-    <b class='text-gray-900'>Somi</b> et connecta amb conductors i passatgers en
-    <b class='text-somi-600'> comunitats locals </b> de confiança, facilitant
-    <b class='text-somi-600'> compartir trajectes habituals </b> de manera
-    <b class='text-somi-600'> eficient, segura i sostenible</b>.
-  `,
+    descriptionInBold: 'Somi',
+    description: [
+        { emphasis: false, text: ' et connecta amb conductors i passatgers en ' },
+        { emphasis: true, text: 'comunitats locals' },
+        { emphasis: false, text: ' de confiança, facilitant ' },
+        { emphasis: true, text: 'compartir trajectes habituals' },
+        { emphasis: false, text: ' de manera ' },
+        { emphasis: true, text: 'eficient, segura i sostenible' },
+        { emphasis: false, text: '.' },
+    ],
     cta: 'Com Funciona',
     features: [
         {
