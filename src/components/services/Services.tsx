@@ -53,7 +53,7 @@ const MunicipalServices = () => {
         </div>
 
         {/* SERVICES */}
-        <div id="services-list" className="animate-on-scroll">
+        <div id="services-details" className="animate-on-scroll scroll-mt-32">
           <h3 className="heading-md text-center text-gray-900 dark:text-white mb-12">
             {municipalServicesSection.servicesHeader}
           </h3>
@@ -65,7 +65,7 @@ const MunicipalServices = () => {
                 <div
                   key={index}
                   className="bg-green-50 dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-green-100 dark:border-gray-700 hover:shadow-md transition-all cursor-pointer"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById('download-contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <div className="flex justify-center mb-6">
                     <Icon className="h-12 w-12 text-green-700" />

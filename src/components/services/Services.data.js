@@ -10,7 +10,7 @@ export const municipalServicesSection = {
             "Ens adaptem a les necessitats de cada municipi o organització, treballant de manera propera i personal.",
         ctaPrimary: {
             label: "Descobreix els nostres serveis",
-            href: "#services-list",
+            href: "#services-details",
         },
         ctaSecondary: {
             label: "Contacta amb nosaltres",
