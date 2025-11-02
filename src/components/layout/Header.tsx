@@ -31,7 +31,15 @@ const Header = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <img src="/assets/icons/main_logo_mark.svg" alt="Somi Logo" className="h-16 w-auto" />
+        <a href="#" className="flex items-center space-x-2">
+          <img src="logo.svg" alt="Somi logo" className="h-10 w-auto"></img>
+          <span className={cn(
+            "font-bold text-2xl transition-colors duration-300",
+            isScrolled ? "text-gray-900 dark:text-white" : "text-gray-900 dark:text-white"
+          )}>
+            Somi
+          </span>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
