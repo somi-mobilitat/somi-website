@@ -4,7 +4,6 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
-  base: "/somi-website/", // Adjust base path for GitHub Pages
   server: {
     host: "::",
     port: 8080,

@@ -26,7 +26,7 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
             <img
-              src="/somi-website/assets/icons/logo_compact.svg"
+              src="/assets/icons/logo_compact.svg"
               alt="Somi logo"
               className="h-12 w-auto"
             />
