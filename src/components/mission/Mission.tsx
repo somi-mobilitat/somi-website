@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { aboutUsSection } from './Mission.data.js';
 import { Unplug } from 'lucide-react';
 
-const AboutUs = () => {
+const Mission = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -99,4 +99,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Mission;

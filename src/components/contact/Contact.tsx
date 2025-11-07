@@ -4,7 +4,7 @@ import { downloadContent } from './Contact.data.js';
 
 const MOBILE_BREAKPOINT = 768
 
-const Download = () => {
+const Contact = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -119,4 +119,4 @@ const Download = () => {
   );
 };
 
-export default Download;
+export default Contact;
