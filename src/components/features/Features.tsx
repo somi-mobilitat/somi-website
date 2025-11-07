@@ -20,7 +20,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section id="features" className="page-section py-24 bg-somi-50">
+    <section id="caracteristiques" className="page-section py-24 bg-somi-50">
       <div className="container">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">

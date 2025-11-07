@@ -22,7 +22,7 @@ const Hero = () => {
   const icons = { Users, MapPin, Calendar };
 
   return (
-    <section id="home" className="relative overflow-hidden min-h-screen flex items-center pt-28 pb-16">
+    <section id="inici" className="relative overflow-hidden min-h-screen flex items-center pt-28 pb-16">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-somi-50/50 to-white -z-10"></div>
 
@@ -64,7 +64,7 @@ const Hero = () => {
                 variant="outline"
                 className="rounded-full px-8 py-6 border-gray-300 hover:bg-gray-50 button-hover-effect"
               >
-                <a href="#features">{heroContent.cta}</a>
+                <a href="#caracteristiques">{heroContent.cta}</a>
               </Button>
             </div>
 

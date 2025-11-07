@@ -13,7 +13,7 @@ const MunicipalServices = () => {
   }, []);
 
   return (
-    <section id="services" className="page-section py-24 bg-white">
+    <section id="serveis" className="page-section py-24 bg-white">
       <div className="container">
 
         {/* HEADER */}

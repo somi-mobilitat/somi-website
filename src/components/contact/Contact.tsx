@@ -20,7 +20,7 @@ const Download = () => {
   }, []);
 
   return (
-    <section id="contact" className="page-section py-24 bg-gray-50">
+    <section id="contacte" className="page-section py-24 bg-gray-50">
       <div className="container">
 
         {/* Header */}
