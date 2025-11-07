@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { Mail } from 'lucide-react';
 import { downloadContent } from './Contact.data.js';
 
+const MOBILE_BREAKPOINT = 768
+
 const Download = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,6 +20,22 @@ const Download = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const handleHashScroll = () => {
+      if (window.location.hash === '#contacte' && window.innerWidth < MOBILE_BREAKPOINT) {
+        const contactCol = document.querySelector('.right-column');
+        contactCol?.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    handleHashScroll(); // scroll si ja hi ha hash a l’inici
+    window.addEventListener('hashchange', handleHashScroll);
+
+    return () => window.removeEventListener('hashchange', handleHashScroll);
+
+  }, []);
+
 
   return (
     <section id="contacte" className="page-section py-24 bg-gray-50">
@@ -44,10 +62,14 @@ const Download = () => {
               <h3 className="text-center heading-md text-gray-900 mb-4">
                 {downloadContent.leftColumn.title}
               </h3>
-              <p className="text-gray-600 mb-6 whitespace-pre-line">
-                {downloadContent.leftColumn.description}
+              <p className="text-gray-600 md:text-justify whitespace-pre-line">
+                {downloadContent.leftColumn.description1}
               </p>
-              <div className="justify-center flex flex-col sm:flex-row items-center md:items-start gap-4">
+              <p className="text-gray-600 mb-4 whitespace-pre-line">
+                {downloadContent.leftColumn.description2}
+              </p>
+
+              <div className="justify-center flex flex-col sm:flex-row items-center md:items-start gap-4 lg:gap-8 pb-4 md:pb-0">
                 <a
                   className={`block opacity-80 ${downloadContent.leftColumn.appStore.disabled ? 'cursor-not-allowed' : ''}`}
                   aria-disabled={downloadContent.leftColumn.appStore.disabled}
@@ -72,11 +94,11 @@ const Download = () => {
             </div>
 
             {/* RIGHT */}
-            <div className="flex flex-col h-full text-center md:text-left scroll-mt-32">
+            <div className="right-column flex flex-col h-full text-center md:text-left scroll-mt-32">
               <h3 className="text-center heading-md text-gray-900 mb-4">
                 {downloadContent.rightColumn.title}
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 md:text-justify">
                 {downloadContent.rightColumn.description}
               </p>
               <a

@@ -5,7 +5,8 @@ export const downloadContent = {
     },
     leftColumn: {
         title: "Aplicació mòbil",
-        description: "Aconsegueix l'experiència completa de Somi al teu telèfon. Gestiona fàcilment els viatges, comunica't amb la teva comunitat i rep notificacions en temps real.\n\nPròximament disponible a les principals plataformes.",
+        description1: "Descarrega l'app de Somi per gaudir d'una mobilitat més sostenible i connectada.",
+        description2: "Pròximament a les principals plataformes.",
         appStore: {
             src: "https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg",
             alt: "Pròximament a l'App Store",
@@ -19,7 +20,7 @@ export const downloadContent = {
     },
     rightColumn: {
         title: "Vols saber més sobre el projecte?",
-        description: "Escriu-nos per conèixer més detalls o per col·laborar amb aquest projecte que canviarà la mobilitat a Catalunya.",
+        description: "Escriu-nos per conèixer-ne més detalls o per col·laborar amb el projecte.",
         email: "contacte@somi.cat",
     },
 };
