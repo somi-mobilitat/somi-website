@@ -1,4 +1,4 @@
-export const downloadContent = {
+export const contactContent = {
     header: {
         title: 'Pròximament disponible',
         subtitle: 'Aviat podràs descarregar Somi i unir-te a la comunitat en moviment.',

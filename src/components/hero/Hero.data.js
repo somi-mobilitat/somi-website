@@ -13,7 +13,7 @@ export const heroContent = {
         { emphasis: true, text: 'eficient, segura i sostenible' },
         { emphasis: false, text: '.' },
     ],
-    cta: 'Com Funciona',
+    cta: 'Com funciona',
     features: [
         {
             icon: 'Users',

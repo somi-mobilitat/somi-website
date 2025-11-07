@@ -1,6 +1,6 @@
 import { TabletSmartphone, BarChart3, Megaphone } from 'lucide-react';
 
-export const municipalServicesSection = {
+export const servicesContent = {
     header: {
         title: "Solucionem els reptes de mobilitat de la vostra comunitat",
         description:

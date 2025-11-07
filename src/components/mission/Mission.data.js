@@ -3,7 +3,7 @@ import { Leaf, Globe, Users, Bolt, LandPlot, Handshake } from 'lucide-react';
 
 /// REFER COMPLETAMENT
 
-export const aboutUsSection = {
+export const missionContent = {
     header: {
         title: "Per què hem creat Somi",
         subtitle: [
@@ -11,7 +11,7 @@ export const aboutUsSection = {
             { emphasis: true, text: "cotxes compartits" },
             { emphasis: false, text: " a Europa " },
             { emphasis: true, text: "creix" },
-            { emphasis: false, text: " de manera contínua — amb increments de " },
+            { emphasis: false, text: " de manera contínua, amb increments de " },
             { emphasis: true, text: "+10% l'any" },
             { emphasis: false, text: " i augments acumulats de " },
             { emphasis: true, text: "+20-30%" },

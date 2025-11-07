@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { aboutUsSection } from './Mission.data.js';
+import { missionContent } from './Mission.data.js';
 import { Unplug } from 'lucide-react';
 
 const Mission = () => {
@@ -25,10 +25,10 @@ const Mission = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
           <h2 className="heading-lg text-gray-900 mb-4">
-            {aboutUsSection.header.title}
+            {missionContent.header.title}
           </h2>
           <p className="body-base text-gray-600 max-w-2xl mx-auto">
-            {aboutUsSection.header.subtitle.map((part, index) => (
+            {missionContent.header.subtitle.map((part, index) => (
               <span
                 key={index}
                 className={part.emphasis ? 'font-bold text-xl text-somi-600' : ''}
@@ -39,12 +39,12 @@ const Mission = () => {
           </p>
           <div className="mt-4">
             <a
-              href={aboutUsSection.header.sourceLink}
+              href={missionContent.header.sourceLink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-gray-500 hover:underline"
             >
-              {aboutUsSection.header.sourceLabel}
+              {missionContent.header.sourceLabel}
             </a>
           </div>
         </div>
@@ -56,12 +56,12 @@ const Mission = () => {
             <div className="flex flex-col h-full text-center md:text-left">
               <h3 className="heading-md text-gray-900 mb-6 flex items-center gap-2 text-green-700">
                 <Unplug className="h-6 w-6" />
-                {aboutUsSection.challengesHeader}
+                {missionContent.challengesHeader}
               </h3>
 
               {/* Bullets */}
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                {aboutUsSection.challenges.map((challenge, index) => (
+                {missionContent.challenges.map((challenge, index) => (
                   <div
                     key={index}
                     className="flex items-center justify-center text-green-700 font-medium text-center rounded-full px-6 py-6 min-w-[160px] max-w-[180px] h-[160px] bg-gray-200 relative shadow-md transition-transform hover:scale-105"
@@ -77,10 +77,10 @@ const Mission = () => {
             {/* RIGHT: Values */}
             <div className="flex flex-col h-full text-center md:text-left">
               <h3 className="heading-md text-gray-900 mb-6 text-green-700">
-                {aboutUsSection.valuesHeader}
+                {missionContent.valuesHeader}
               </h3>
               <ul className="space-y-3">
-                {aboutUsSection.values.map((value, index) => {
+                {missionContent.values.map((value, index) => {
                   const Icon = value.icon;
                   return (
                     <li key={index} className="flex items-center gap-3 text-gray-900">
