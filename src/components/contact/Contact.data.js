@@ -1,7 +1,7 @@
 export const contactContent = {
     header: {
         title: 'Pròximament disponible',
-        subtitle: 'Aviat podràs descarregar Soomi i unir-te a la comunitat en moviment.',
+        subtitle: "Aviat podràs descarregar l'app i unir-te a la comunitat en moviment.",
     },
     leftColumn: {
         title: "Aplicació mòbil",
