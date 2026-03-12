@@ -18,22 +18,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-8">
 
           {/* Column 1: Logo + slogan */}
-          <div className="flex flex-col items-center md:items-start space-y-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <img
-                src="/assets/icons/secondary_logo_mark-cropped.svg"
-                alt="Soomi logo"
-                className="invisible h-0 w-auto md:h-12 md:visible"
-              />
-              <img
-                src="/assets/icons/main_logo_mark-cropped.svg"
-                alt="Soomi logo"
-                className="visible h-24 w-auto md:h-0 md:invisible"
-              />
-            </div>
-            <p className="text-gray-600 text-sm mb-6">
-              {footerContent.slogan}
-            </p>
+          <div className="flex flex-col items-center md:items-start">
+            <img
+              src="/assets/icons/main_logo_mark-cropped.svg"
+              alt="Soomi logo"
+              className="h-20 w-auto px-8"
+            />
+            <p className="text-gray-600 text-sm px-8">{footerContent.slogan}</p>
           </div>
 
           {/* Column 2: Email, vertically centered */}
