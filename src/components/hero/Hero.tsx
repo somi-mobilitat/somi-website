@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="animate-on-scroll">
             {/* Logo + slogan */}
             <div className="flex flex-col md:flex-row md:items-center md:space-x-8 mb-4">
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-snug mb-2 mt-0 sm:mt-4">
+              <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-snug mb-2 mt-0 sm:mt-4 text-center md:text-right md:mr-24">
                 {heroContent.slogan.main} <span className="text-soomi-500">{heroContent.slogan.highlight}</span>
               </h1>
             </div>
