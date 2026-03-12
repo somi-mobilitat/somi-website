@@ -12,19 +12,19 @@ const Footer = () => {
 
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="container max-w-7xl mx-auto px-4 py-12 md:py-16">
+      <div className="container max-w-7xl mx-auto px-4 py-8 md:py-6">
 
         {/* Top row: 3 columns */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-8">
 
           {/* Column 1: Logo + slogan */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center gap-1">
             <img
               src="/assets/icons/main_logo_mark-cropped.svg"
               alt="Soomi logo"
               className="h-20 w-auto px-8"
             />
-            <p className="text-gray-600 text-sm px-8">{footerContent.slogan}</p>
+            <p className="text-gray-600 text-sm text-center">{footerContent.slogan}</p>
           </div>
 
           {/* Column 2: Email, vertically centered */}
