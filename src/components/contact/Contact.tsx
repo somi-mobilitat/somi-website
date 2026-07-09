@@ -73,7 +73,7 @@ const Contact = () => {
 
               {/* Badges bottom */}
               <div className="justify-center flex flex-col sm:flex-row items-center md:items-start gap-4 lg:gap-8 pb-4 md:pb-0">
-                <a
+                <span
                   className={`block opacity-80 ${contactContent.leftColumn.appStore.disabled ? 'cursor-not-allowed' : ''}`}
                   aria-disabled={contactContent.leftColumn.appStore.disabled}
                 >
@@ -82,8 +82,8 @@ const Contact = () => {
                     alt={contactContent.leftColumn.appStore.alt}
                     className="h-12 w-auto lg:mr-8"
                   />
-                </a>
-                <a
+                </span>
+                <span
                   className={`block opacity-80 ${contactContent.leftColumn.googlePlay.disabled ? 'cursor-not-allowed' : ''}`}
                   aria-disabled={contactContent.leftColumn.googlePlay.disabled}
                 >
@@ -92,7 +92,7 @@ const Contact = () => {
                     alt={contactContent.leftColumn.googlePlay.alt}
                     className="h-12 w-auto"
                   />
-                </a>
+                </span>
               </div>
             </div>
 

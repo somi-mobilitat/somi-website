@@ -48,11 +48,17 @@ const Mission = () => {
 
         {/* IMAGE BAND */}
         <div className="relative w-full mb-8 animate-on-scroll">
-          <img
-            src={missionContent.banner.image}
-            alt={missionContent.banner.alt}
-            className="w-full h-56 object-cover rounded-2xl shadow-md"
-          />
+          <picture>
+            <source srcSet={missionContent.banner.image.replace(/\.(jpg|jpeg)$/, '.webp')} type="image/webp" />
+            <img
+              src={missionContent.banner.image}
+              alt={missionContent.banner.alt}
+              width={1536}
+              height={512}
+              loading="lazy"
+              className="w-full h-56 object-cover rounded-2xl shadow-md"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent rounded-2xl"></div>
         </div>
 

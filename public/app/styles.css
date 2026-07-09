@@ -1,0 +1,119 @@
+:root {
+  --soomi-50:  #FFFEE6;
+  --soomi-100: #FFFACC;
+  --soomi-500: #FFD400;
+  --soomi-700: #CCAA00;
+  --green-500: #4F772D;
+  --green-700: #3F5E24;
+  --green-900: #2F451A;
+  --ink:       #1A1A14;
+  --muted:     #6B6B5E;
+  --radius:    1rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--soomi-50);
+  text-align: center;
+}
+
+.wordmark {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.wordmark .dot { color: var(--green-500); }
+
+.card {
+  background: #fff;
+  border: 7px solid var(--soomi-500);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  max-width: 24rem;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(153, 127, 0, 0.18);
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.hidden { display: none; }
+
+/* ---- Mobile view ---- */
+.spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  border: 4px solid var(--soomi-100);
+  border-top-color: var(--soomi-500);
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; border-top-color: var(--soomi-700); }
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: var(--green-500);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.btn:hover, .btn:focus-visible { background: var(--green-700); }
+.btn:focus-visible { outline: 3px solid var(--soomi-500); outline-offset: 2px; }
+
+/* ---- Desktop view ---- */
+#qr {
+  display: inline-block;
+  padding: 1rem;
+  margin: 1.25rem 0 0.75rem;
+  background: #fff;
+  border-radius: calc(var(--radius) - 4px);
+  border: 2px solid var(--soomi-100);
+  line-height: 0;
+}
+#qr img, #qr canvas { border-radius: 4px; }
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+footer {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+footer a { color: var(--green-500); font-weight: 600; text-decoration: none; }
+footer a:hover { text-decoration: underline; }

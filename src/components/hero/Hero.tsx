@@ -59,7 +59,7 @@ const Hero = () => {
               <Button
                 asChild
                 variant="outline"
-                className="rounded-full px-8 py-6 border-gray-300 hover:bg-gray-50 button-hover-effect lg:text-lg"
+                className="rounded-full px-8 py-6 bg-soomi-500 hover:bg-soomi-400 text-gray-900 font-bold button-hover-effect lg:text-lg"
               >
                 <a href="#caracteristiques">{heroContent.cta}</a>
               </Button>
@@ -75,7 +75,7 @@ const Hero = () => {
                       <Icon size={20} />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">{feature.title}</h3>
+                      <p className="font-semibold text-gray-900">{feature.title}</p>
                       <p className="text-sm text-gray-600">{feature.description}</p>
                     </div>
                   </div>

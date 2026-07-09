@@ -69,7 +69,10 @@ const MunicipalServices = () => {
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
-                  <img src={service.image} alt={service.alt} className="rounded-xl mt-6 w-full object-cover" />
+                  <picture>
+                    <source srcSet={service.image.replace(/\.(jpg|jpeg)$/, '.webp')} type="image/webp" />
+                    <img src={service.image} alt={service.alt} width={1200} height={800} loading="lazy" className="rounded-xl mt-6 w-full object-cover" />
+                  </picture>
                 </div>
               );
             })}
