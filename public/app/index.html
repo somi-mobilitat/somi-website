@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FFD400">
+  <title>Obrir l'app · Soomi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="wordmark" href="https://soomi.cat">soomi<span class="dot">.</span></a>
+
+  <!-- Mobile view -->
+  <main id="mobile" class="card hidden">
+    <div class="spinner" aria-hidden="true"></div>
+    <h1>Obrint l'app de Soomi…</h1>
+    <p>Si l'app no s'obre automàticament, potser encara no la tens instal·lada.</p>
+    <a id="store-link" class="btn" href="#">Descarrega l'app</a>
+  </main>
+
+  <!-- Desktop view -->
+  <main id="desktop" class="card hidden">
+    <h1>Obre aquest enllaç al teu telèfon</h1>
+    <p>L'app de Soomi està disponible a les principals plataformes. <span style="color: var(--green-500); font-weight: 700">Escaneja el codi QR</span> amb la càmera del telèfon per continuar:</p>
+    <div id="qr" role="img" aria-label="Codi QR per obrir aquest enllaç al mòbil"></div>
+    <p class="hint">Apunta la càmera al codi i toca l'enllaç que apareix.</p>
+  </main>
+
+  <footer>Comunitat en moviment · <a href="https://soomi.cat">soomi.cat</a></footer>
+
+  <script src="config.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    (function () {
+      var ua = navigator.userAgent;
+      var isIOS = /iPhone|iPad|iPod/.test(ua) ||
+                  (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1); // modern iPad
+      var isAndroid = /Android/.test(ua);
+      var isMobile = isIOS || isAndroid;
+
+      if (isMobile) {
+        document.getElementById("mobile").classList.remove("hidden");
+
+        if (isAndroid) {
+          document.getElementById("store-link").href = SOOMI_APP.androidStore;
+          // Android shows a disambiguation dialog — user taps to confirm.
+          // No auto-redirect to store: let the user tap "Download" if needed.
+          window.location.href = SOOMI_APP.scheme;
+        } else {
+          // iOS: custom schemes either open the app or do nothing — timer covers the fallback.
+          document.getElementById("store-link").href = SOOMI_APP.iosStore;
+          window.location.href = SOOMI_APP.scheme;
+          setTimeout(function () {
+            if (!document.hidden) { window.location.href = SOOMI_APP.iosStore; }
+          }, 2000);
+        }
+
+      } else {
+        document.getElementById("desktop").classList.remove("hidden");
+
+        new QRCode(document.getElementById("qr"), {
+          text: window.location.href,
+          width: 200,
+          height: 200,
+          colorDark: "#1A1A14",
+          colorLight: "#FFFFFF",
+          correctLevel: QRCode.CorrectLevel.M
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
