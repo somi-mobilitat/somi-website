@@ -6,6 +6,18 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "src/**"
+      - "public/**"
+      - "index.html"
+      - "package.json"
+      - "package-lock.json"
+      - "vite.config.ts"
+      - "tsconfig*.json"
+      - "tailwind.config.ts"
+      - "postcss.config.js"
+      - "components.json"
+      - ".github/workflows/deploy.yml"
 
 permissions:
   contents: read
@@ -30,7 +42,7 @@ jobs:
 
       - name: Upload static files as artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist/
           retention-days: 1
