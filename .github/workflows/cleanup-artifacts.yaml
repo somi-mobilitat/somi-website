@@ -1,0 +1,38 @@
+name: Cleanup Old Build Artifacts
+
+# build.yml/deploy.yml already set retention-days: 1 on their own dist/github-pages uploads, so
+# those self-expire. The gap is lighthouse-results (uploaded internally by
+# treosh/lighthouse-ci-action), which has no retention override and falls back to the org/repo
+# default (commonly 90 days) — with no cleanup workflow in this repo, those accumulate
+# indefinitely and can eat into the org's shared Actions storage quota. This deletes any
+# artifact older than 1 day via the GitHub Artifacts REST API directly (not a third-party
+# action), same pattern as soomi-admin-tools' cleanup-artifacts.yaml.
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Every day at 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  cleanup:
+    name: Delete artifacts older than 1 day
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete old artifacts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          cutoff=$(date -u -d '1 day ago' +%s)
+          deleted=0
+
+          for artifact_id in $(gh api "repos/$REPO/actions/artifacts?per_page=100" --paginate \
+            --jq ".artifacts[] | select((.created_at | fromdateiso8601) < $cutoff) | .id"); do
+            gh api --method DELETE "repos/$REPO/actions/artifacts/$artifact_id"
+            deleted=$((deleted + 1))
+          done
+
+          echo "Deleted $deleted artifact(s) older than 1 day"
